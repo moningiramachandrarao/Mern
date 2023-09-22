@@ -12,7 +12,7 @@
 </style>
 <body style="background: radial-gradient(circle at 5.3% 18.2%, rgb(255, 208, 253) 0%, rgb(255, 237, 216) 90%);">
     <h1 style="color:blue;" align="center">Registration form</h1>
-    <form>
+    <form onsubmit=" return f10()" action="index.html">
     <table  style="border-collapse: collapse;" align="center">
         <tr>
             <th>First Name </th>
@@ -107,10 +107,11 @@
         </tr>
     </table><br>
 
-    <div align="center" ><button name="register" value="Register"style="color:white;background-color:red;border-radius:20px;">REGISTER</button></div>
+    <div align="center" ><button name="register" type="submit" value="Register"style="color:white;background-color:red;border-radius:20px;">REGISTER</button></div>
 
     </form>
     <script>
+    var count=0;
         function f1(){
             var input1=document.getElementById("fname").value;
             if(input1.length < 5 ){
@@ -118,6 +119,7 @@
                 document.getElementById("msg1").style.color="Red";
             }
             else{
+                count++;
                 document.getElementById("msg1").innerText="GOOD";
                 document.getElementById("msg1").style.color="Green";
             }
@@ -129,6 +131,7 @@
                 document.getElementById("msg2").style.color="Red";
             }
             else{
+                count++;
                 document.getElementById("msg2").innerText="GOOD";
                 document.getElementById("msg2").style.color="Green";
             }
@@ -141,6 +144,7 @@
                 document.getElementById("msg3").style.color="Red";
             }
             else{
+                count++;
                 document.getElementById("msg3").innerText="GOOD";
                 document.getElementById("msg3").style.color="Green";
             }
@@ -154,6 +158,7 @@
         document.getElementById("msg4").style.color="Red";
      }
      else{
+        count++;
          document.getElementById("msg4").innerText="GOOD";
          document.getElementById("msg4").style.color="Green";
         }
@@ -172,6 +177,7 @@
         document.getElementById("msg5").style.color="Red";
         }
         else{
+            count++;
             document.getElementById("msg5").innerText="GOOD";
          document.getElementById("msg5").style.color="Green"; 
         }
@@ -183,6 +189,7 @@
         document.getElementById("msg6").style.color="Red";
             }
             else{
+                count++;
                 document.getElementById("msg6").innerText="GOOD";
          document.getElementById("msg6").style.color="Green"; 
             }
@@ -195,6 +202,7 @@
         document.getElementById("msg7").style.color="Red";
    }
    else{
+    count++;
         document.getElementById("msg7").innerText="GOOD";
          document.getElementById("msg7").style.color="Green"; 
             }
@@ -206,6 +214,7 @@
                 document.getElementById("msg8").style.color="Red";
             }
             else{
+                count++;
                 document.getElementById("msg8").innerText="GOOD";
                 document.getElementById("msg8").style.color="Green";
             }
@@ -217,10 +226,18 @@
                 document.getElementById("msg9").style.color="Red";
             }
             else{
+                count++;
                 document.getElementById("msg9").innerText="GOOD";
                 document.getElementById("msg9").style.color="Green";
             }
         }
+        function f10(){
+        if(count==9){
+return  true;
+
+        }
+    }
+
 
     </script>
 </body>
