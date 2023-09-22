@@ -12,7 +12,7 @@
 </style>
 <body style="background: radial-gradient(circle at 5.3% 18.2%, rgb(255, 208, 253) 0%, rgb(255, 237, 216) 90%);">
     <h1 style="color:blue;" align="center">Registration form</h1>
-    <form onsubmit=" return f10()" action="index.html">
+    <form onsubmit=" return f10()" action="index.html" >
     <table  style="border-collapse: collapse;" align="center">
         <tr>
             <th>First Name </th>
@@ -232,11 +232,21 @@
             }
         }
         function f10(){
-        if(count==9){
-return  true;
+            var msg1 = document.getElementById("msg1").innerText;
+        var msg2 = document.getElementById("msg2").innerText;
+        var msg3 = document.getElementById("msg3").innerText;
+        var msg4 = document.getElementById("msg4").innerText;
+        var msg5 = document.getElementById("msg5").innerText;
+        var msg6 = document.getElementById("msg6").innerText;
+        var msg7 = document.getElementById("msg7").innerText;
+        var msg8 = document.getElementById("msg8").innerText;
+        var msg9 = document.getElementById("msg9").innerText;
 
+      if(msg1=="GOOD" && msg2=="GOOD" && msg3=="GOOD" && msg4=="GOOD" && msg5=="GOOD" && msg6=="GOOD" && msg7=="GOOD" && msg8=="GOOD" && msg9 =="GOOD"   ){
+        return true;
+      }
+        return false;
         }
-    }
 
 
     </script>
